@@ -35,8 +35,8 @@ class LLaMA2FineTunedCompletionFn(CompletionFn):
             top_p=0.95,
             repetition_penalty=1.15
         )
-
-        return pipe(prompt_template)[0]['generated_text']
+        response = pipe(prompt_template)
+        return LLaMA2FineTunedCompletionResult(response[0]['generated_text'])
         # prompt = CompletionPrompt(prompt).to_formatted_prompt()
         # response = self.llm_math.run(prompt)
         # # The LangChain response comes with `Answer: ` ahead of this, let's strip it out
