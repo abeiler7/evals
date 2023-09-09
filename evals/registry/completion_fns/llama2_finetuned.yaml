@@ -1,0 +1,6 @@
+llama2/goatV9-chat-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatV9-chat-QLORA-Merged
+    base_model: meta-llama/Llama-2-7b-chat-hf
+    
