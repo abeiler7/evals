@@ -19,12 +19,12 @@ class LLaMA2FineTunedCompletionFn(CompletionFn):
 
     def __call__(self, prompt, **kwargs) -> LLaMA2FineTunedCompletionResult:
 
-        prompt_template=f'''[INST] <<SYS>>
-        You are a helpful, respectful and honest math tutor. You are to respond the question with only the numeric answer.
-        <</SYS>>
-        {prompt}[/INST]
+        # prompt_template=f'''[INST] <<SYS>>
+        # You are a helpful, respectful and honest math tutor. You are to respond the question with only the numeric answer.
+        # <</SYS>>
+        # {prompt}[/INST]
 
-        '''
+        # '''
 
         pipe = pipeline(
             "text-generation",
@@ -35,7 +35,7 @@ class LLaMA2FineTunedCompletionFn(CompletionFn):
             top_p=0.95,
             repetition_penalty=1.15
         )
-        response = pipe(prompt_template)
+        response = pipe(prompt)
         return LLaMA2FineTunedCompletionResult(response[0]['generated_text'])
         # prompt = CompletionPrompt(prompt).to_formatted_prompt()
         # response = self.llm_math.run(prompt)
