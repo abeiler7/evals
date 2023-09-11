@@ -1,18 +1,180 @@
-# Define a base eval
-big-bench-arithmetic:
-  # id specifies the eval that this eval is an alias for
-  # in this case, arithmetic is an alias for arithmetic.dev.match-v1
-  # When you run `oaieval davinci arithmetic`, you are actually running `oaieval davinci arithmetic.dev.match-v1`
+bb-arithmetic-1-digit-addition:
   id: arithmetic.dev.match-v1
-  # The metrics that this eval records
-  # The first metric will be considered to be the primary metric
   metrics: [accuracy]
   description: Evaluate arithmetic ability
-# Define the eval
-arithmetic.dev.match-v1:
-  # Specify the class name as a dotted path to the module and class
+arithmetic-1-digit-addition.dev.match-v1:
   class: evals.elsuite.bb-arithmetic:BBArithmetic
-  # Specify the arguments as a dictionary of JSONL URIs
-  # These arguments can be anything that you want to pass to the class constructor
   args:
     test_jsonl: big-bench-arithmetic/1-digit-addition.jsonl
+
+bb-arithmetic-1_digit_subtraction:
+    id: arithmetic-1_digit_subtraction.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 1_digit_subtraction
+arithmetic-1_digit_subtraction.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/1_digit_subtraction.jsonl
+
+bb-arithmetic-2_digit_multiplication:
+    id: arithmetic-2_digit_multiplication.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 2_digit_multiplication
+arithmetic-2_digit_multiplication.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/2_digit_multiplication.jsonl
+
+bb-arithmetic-3_digit_division:
+    id: arithmetic-3_digit_division.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 3_digit_division
+arithmetic-3_digit_division.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/3_digit_division.jsonl
+
+bb-arithmetic-4_digit_addition:
+    id: arithmetic-4_digit_addition.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 4_digit_addition
+arithmetic-4_digit_addition.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/4_digit_addition.jsonl
+
+bb-arithmetic-4_digit_subtraction:
+    id: arithmetic-4_digit_subtraction.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 4_digit_subtraction
+arithmetic-4_digit_subtraction.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/4_digit_subtraction.jsonl
+
+bb-arithmetic-5_digit_multiplication:
+    id: arithmetic-5_digit_multiplication.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 5_digit_multiplication
+arithmetic-5_digit_multiplication.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/5_digit_multiplication.jsonl
+
+bb-arithmetic-1_digit_division:
+    id: arithmetic-1_digit_division.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 1_digit_division
+arithmetic-1_digit_division.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/1_digit_division.jsonl
+
+bb-arithmetic-2_digit_addition:
+    id: arithmetic-2_digit_addition.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 2_digit_addition
+arithmetic-2_digit_addition.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/2_digit_addition.jsonl
+
+bb-arithmetic-2_digit_subtraction:
+    id: arithmetic-2_digit_subtraction.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 2_digit_subtraction
+arithmetic-2_digit_subtraction.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/2_digit_subtraction.jsonl
+
+bb-arithmetic-3_digit_multiplication:
+    id: arithmetic-3_digit_multiplication.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 3_digit_multiplication
+arithmetic-3_digit_multiplication.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/3_digit_multiplication.jsonl
+
+bb-arithmetic-4_digit_division:
+    id: arithmetic-4_digit_division.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 4_digit_division
+arithmetic-4_digit_division.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/4_digit_division.jsonl
+
+bb-arithmetic-5_digit_addition:
+    id: arithmetic-5_digit_addition.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 5_digit_addition
+arithmetic-5_digit_addition.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/5_digit_addition.jsonl
+
+bb-arithmetic-5_digit_subtraction:
+    id: arithmetic-5_digit_subtraction.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 5_digit_subtraction
+arithmetic-5_digit_subtraction.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/5_digit_subtraction.jsonl
+
+bb-arithmetic-1_digit_multiplication:
+    id: arithmetic-1_digit_multiplication.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 1_digit_multiplication
+arithmetic-1_digit_multiplication.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/1_digit_multiplication.jsonl
+
+bb-arithmetic-2_digit_division:
+    id: arithmetic-2_digit_division.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 2_digit_division
+arithmetic-2_digit_division.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/2_digit_division.jsonl
+
+bb-arithmetic-3_digit_addition:
+    id: arithmetic-3_digit_addition.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 3_digit_addition
+arithmetic-3_digit_addition.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/3_digit_addition.jsonl
+
+bb-arithmetic-3_digit_subtraction:
+    id: arithmetic-3_digit_subtraction.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 3_digit_subtraction
+arithmetic-3_digit_subtraction.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/3_digit_subtraction.jsonl
+
+bb-arithmetic-4_digit_multiplication:
+    id: arithmetic-4_digit_multiplication.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 4_digit_multiplication
+arithmetic-4_digit_multiplication.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/4_digit_multiplication.jsonl
+
+bb-arithmetic-5_digit_division:
+    id: arithmetic-5_digit_division.dev.match-v1
+    metrics: [accuracy]
+    description: Evaluate arithmetic ability on 5_digit_division
+arithmetic-5_digit_division.dev.match-v1:
+    class: evals.elsuite.bb-arithmetic:BBArithmetic
+    args:
+        test_jsonl: big-bench-arithmetic/5_digit_division.jsonl
+

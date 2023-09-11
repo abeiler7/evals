@@ -13,7 +13,6 @@ class BBArithmetic(evals.Eval):
         """
         Called by the `oaieval` CLI to run the eval. The `eval_all_samples` method calls `eval_sample`.
         """
-        self.train_samples = evals.get_jsonl(self.train_jsonl)
         test_samples = evals.get_jsonl(self.test_jsonl)
         self.eval_all_samples(recorder, test_samples)
 
@@ -48,5 +47,7 @@ class BBArithmetic(evals.Eval):
 
         result = self.completion_fn(prompt=prompt, temperature=0.0, max_tokens=1)
         sampled = result.get_completions()[0]
+        sampled_split = sampled.split("=")
+        sampled_clean = sampled_split[-1].strip()
 
-        evals.record_and_check_match(prompt=prompt, sampled=sampled, expected=test_sample["ideal"])
+        evals.record_and_check_match(prompt=prompt, sampled=sampled_clean, expected=test_sample["ideal"])

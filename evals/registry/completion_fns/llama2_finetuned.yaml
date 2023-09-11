@@ -3,4 +3,9 @@ llama2/finetuned/goatV9-chat-QLORA:
   args:
     model_id: abeiler/goatV9-chat-QLORA-Merged
     base_model: meta-llama/Llama-2-7b-chat-hf
-    
+
+llama2/finetuned/goatV10-QLORA-GGUF:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: /opt/ml/model/
+    base_model: meta-llama/Llama-2-7b-chat-hf
