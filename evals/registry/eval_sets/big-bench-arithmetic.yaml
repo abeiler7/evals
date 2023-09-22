@@ -1,21 +1,22 @@
 big-bench-arithmetic:
   evals:
-    - bb-arithmetic-1_digit_subtraction
-    - bb-arithmetic-2_digit_multiplication
-    - bb-arithmetic-3_digit_division
-    - bb-arithmetic-4_digit_addition
-    - bb-arithmetic-4_digit_subtraction
-    - bb-arithmetic-5_digit_multiplication
-    - bb-arithmetic-1_digit_division
+    - bb-arithmetic-1_digit_addition
     - bb-arithmetic-2_digit_addition
-    - bb-arithmetic-2_digit_subtraction
-    - bb-arithmetic-3_digit_multiplication
-    - bb-arithmetic-4_digit_division
+    - bb-arithmetic-3_digit_addition
+    - bb-arithmetic-4_digit_addition
     - bb-arithmetic-5_digit_addition
+    - bb-arithmetic-1_digit_subtraction
+    - bb-arithmetic-2_digit_subtraction
+    - bb-arithmetic-3_digit_subtraction
+    - bb-arithmetic-4_digit_subtraction
     - bb-arithmetic-5_digit_subtraction
     - bb-arithmetic-1_digit_multiplication
-    - bb-arithmetic-2_digit_division
-    - bb-arithmetic-3_digit_addition
-    - bb-arithmetic-3_digit_subtraction
+    - bb-arithmetic-2_digit_multiplication
+    - bb-arithmetic-3_digit_multiplication
     - bb-arithmetic-4_digit_multiplication
+    - bb-arithmetic-5_digit_multiplication
+    - bb-arithmetic-1_digit_division
+    - bb-arithmetic-2_digit_division
+    - bb-arithmetic-3_digit_division
+    - bb-arithmetic-4_digit_division
     - bb-arithmetic-5_digit_division
