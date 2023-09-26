@@ -14,7 +14,7 @@ class LLaMA2FineTunedCompletionFn(CompletionFn):
     def __init__(self, model_id: str, base_model:str, **kwargs) -> None:
         # llm = OpenAI(temperature=0)
         # self.llm_math = LLMMathChain(llm=llm)
-        self.model = AutoModelForCausalLM.from_pretrained(model_id, load_in_4bit=True, torch_dtype=torch.bfloat16, device_map="auto")
+        self.model = AutoModelForCausalLM.from_pretrained(model_id, load_in_8bit=True, torch_dtype=torch.bfloat16, device_map="auto")
         self.tokenizer = AutoTokenizer.from_pretrained(base_model)
 
     def __call__(self, prompt, **kwargs) -> LLaMA2FineTunedCompletionResult:
