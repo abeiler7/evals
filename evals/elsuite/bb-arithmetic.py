@@ -36,6 +36,8 @@ class BBArithmetic(evals.Eval):
         2. Check if the generated answer is correct.
         """
         
+        system_prompt = ""
+        user_prompt = ""
         for data in test_sample["input"]:
             if data["role"] == "system":
                 system_prompt = f"<<SYS>>\n{data['content']}\n<</SYS>>\n"
