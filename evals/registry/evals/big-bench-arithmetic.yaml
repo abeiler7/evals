@@ -1,11 +1,11 @@
-bb-arithmetic-1-digit-addition:
-  id: arithmetic.dev.match-v1
+bb-arithmetic-1_digit_addition:
+  id: arithmetic-1_digit_addition.dev.match-v1
   metrics: [accuracy]
-  description: Evaluate arithmetic ability
-arithmetic-1-digit-addition.dev.match-v1:
+  description: Evaluate arithmetic ability on 1_digit_addition
+arithmetic-1_digit_addition.dev.match-v1:
   class: evals.elsuite.bb-arithmetic:BBArithmetic
   args:
-    test_jsonl: big-bench-arithmetic/1-digit-addition.jsonl
+    test_jsonl: big-bench-arithmetic/1_digit_addition.jsonl
 
 bb-arithmetic-1_digit_subtraction:
     id: arithmetic-1_digit_subtraction.dev.match-v1
