@@ -16,8 +16,14 @@ llama2/finetuned/goatOrig-QLORA:
     model_id: abeiler/goatOrig-QLORA
     base_model: meta-llama/Llama-2-7b-hf
 
-llama2/finetuned/goatOrig-QLORA_local:
+llama2/finetuned/goatAlphaRep-QLORA:
   class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
   args:
-    model_id: /content/gdrive/My Drive/Thesis/goatOrig-QLORA
-    base_model: /content/gdrive/My Drive/Thesis/goatOrig-QLORA
+    model_id: abeiler/goatAlphaRep-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatWordProb-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatWordProb-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
