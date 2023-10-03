@@ -1,5 +1,4 @@
-import json
-import argparse
+from num2words import num2words
 
 # EXAMPLE OPENAI EVALS JSONL FORMAT
 # {"input": [{"role": "system", "content": "Complete the phrase as concisely as possible."}, {"role": "user", "content": "Once upon a "}], "ideal": "time"}
@@ -9,6 +8,7 @@ import argparse
 def to_openai_eval_format(input_data: dict) -> list:
     output_data = []
     for ex in input_data["examples"]:
+        alpha_rep = num2words(ex["target"])
         formatted_ex = {
             "input": [
                 {
@@ -16,7 +16,7 @@ def to_openai_eval_format(input_data: dict) -> list:
                     "content": ex["input"]
                 }
             ],
-            "ideal": ex["target"]
+            "ideal": [ex["target"], alpha_rep, alpha_rep.replace("-", " ")]
         }
         output_data.append(formatted_ex)
     
