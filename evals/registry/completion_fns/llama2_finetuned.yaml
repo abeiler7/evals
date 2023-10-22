@@ -1,14 +1,8 @@
-llama2/finetuned/goatV9-chat-QLORA:
+llama2/finetuned/llama-2-7b:
   class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
   args:
-    model_id: abeiler/goatV9-chat-QLORA-Merged
+    model_id: meta-llama/Llama-2-7b-chat-hf
     base_model: meta-llama/Llama-2-7b-chat-hf
-
-llama2/finetuned/goatV10-QLORA:
-  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
-  args:
-    model_id: abeiler/goatV10-QLORA
-    base_model: meta-llama/Llama-2-7b-hf
 
 llama2/finetuned/goatOrig-QLORA:
   class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
@@ -26,4 +20,40 @@ llama2/finetuned/goatWordProb-QLORA:
   class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
   args:
     model_id: abeiler/goatWordProb-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatAlphaRepInstruct-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatAlphaRepInstruct-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatNumAndAlphaInstruct-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatNumAndAlphaInstruct-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatNumAndAlphaInstruct-25-75-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatNumAndAlphaInstruct-25-75-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatNumAndAlphaInstruct-75-25-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatNumAndAlphaInstruct-75-25-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatNumAndAlphaInstruct-75-25-500K-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatNumAndAlphaInstruct-75-25-500K-QLORA
+    base_model: meta-llama/Llama-2-7b-hf
+
+llama2/finetuned/goatNumAndAlphaInstruct-75-25-100K-QLORA:
+  class: evals.completion_fns.llama2_fine-tuned:LLaMA2FineTunedCompletionFn
+  args:
+    model_id: abeiler/goatNumAndAlphaInstruct-75-25-100K-QLORA
     base_model: meta-llama/Llama-2-7b-hf
